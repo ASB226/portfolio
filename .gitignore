@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.DS_Store
+.env
+dist/
+build/
+*.tmp
+*.temp
+subin_resume.fld/
+subin_resume.html
+package-lock.json
+photo1.PNG
