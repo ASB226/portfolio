@@ -1,4 +1,133 @@
+// Scroll Animation Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Initialize scroll animations
+// Initialize scroll animations
+function initScrollAnimations() {
+    // Process each page separately
+    const pages = document.querySelectorAll('.page');
+    
+    pages.forEach(page => {
+        const selectors = [
+            '.page-header h2',
+            '.page-header h3', 
+            '.page-subtitle',
+            '.achievements-section h4',
+            '.architecture-section h4',
+            '.about-timeline-item',
+            '.introduce-section',
+            '.introduce-content h4',
+            '.introduce-content p',
+            '.skill-category',
+            '.cert-item',
+            '.company-info-plain',
+            '.work-section-plain',
+            '.project-item-plain',
+            '.poc-item',
+            '.project-meta-simple',
+            '.architecture-section',
+            '.architecture-diagram',
+            '.project-objective',
+            '.tech-items',
+            '.achievement-item',
+            '.experience-summary',
+            '.troubleshooting-case',
+            '.case-step',
+            '.customer-count',
+            '.support-card'
+        ];
+        
+        // Collect elements within this page only
+        let pageElements = [];
+        
+        selectors.forEach(selector => {
+            const elements = page.querySelectorAll(selector);
+            elements.forEach(element => {
+                pageElements.push(element);
+            });
+        });
+        
+        // Sort elements by their position within the page
+        pageElements.sort((a, b) => {
+            const position = a.compareDocumentPosition(b);
+            if (position & Node.DOCUMENT_POSITION_FOLLOWING) {
+                return -1;
+            } else if (position & Node.DOCUMENT_POSITION_PRECEDING) {
+                return 1;
+            }
+            return 0;
+        });
+        
+        // Apply animation classes with reset delay per page
+        pageElements.forEach((element, index) => {
+            element.classList.add('fade-in-element');
+            element.style.transitionDelay = `${index * 0.01}s`;
+            observer.observe(element);
+        });
+        
+        console.log(`Page ${page.className}: ${pageElements.length} elements`);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+    
+    if (mobileMenuToggle && mobileMenuDropdown) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuDropdown.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuToggle.contains(e.target) && !mobileMenuDropdown.contains(e.target)) {
+                mobileMenuDropdown.classList.remove('active');
+            }
+        });
+        
+        // Close menu when clicking on menu item
+        const mobileNavItems = mobileMenuDropdown.querySelectorAll('.nav-item');
+        mobileNavItems.forEach(item => {
+            item.addEventListener('click', function() {
+                mobileMenuDropdown.classList.remove('active');
+            });
+        });
+    }
+
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when nav item is clicked
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+    
     const navDots = document.querySelectorAll('.nav-dot');
     const navItems = document.querySelectorAll('.nav-item');
     const pages = document.querySelectorAll('.page');
@@ -8,6 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function showPage(index) {
         if (pages[index]) {
             pages[index].scrollIntoView({ behavior: 'smooth' });
+            
+            // 페이지 이동 시 메뉴 닫기
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         }
     }
     
