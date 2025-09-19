@@ -1820,12 +1820,12 @@ blockquote {
     vertical-align: middle;
 }
 
-.logo-tanzu { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vmware.svg'); }
-.logo-gitlab { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gitlab.svg'); }
-.logo-jenkins { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg'); }
-.logo-harbor { background-image: url('https://goharbor.io/img/logos/harbor-icon-color.png'); }
-.logo-terraform { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg'); }
-.logo-falco { background-image: url('https://landscape.cncf.io/logos/falco.svg'); }
+.logo-tanzu { background-image: url('../icons/vmware.svg'); }
+.logo-gitlab { background-image: url('../icons/gitlab.svg'); }
+.logo-jenkins { background-image: url('../icons/jenkins.svg'); }
+.logo-harbor { background-image: url('../icons/harbor.png'); }
+.logo-terraform { background-image: url('../icons/terraform.svg'); }
+.logo-falco { background-image: url('../icons/falco-icon.png'); }
 
 .project-page .container {
     max-width: 900px;
@@ -2068,35 +2068,35 @@ blockquote {
     vertical-align: middle;
 }
 
-.logo-vmware { background-image: url('https://img.icons8.com/color/48/vmware.png'); }
-.logo-gitlab { background-image: url('https://img.icons8.com/color/48/gitlab.png'); }
-.logo-terraform { background-image: url('https://img.icons8.com/color/48/terraform.png'); }
-.logo-jenkins { background-image: url('https://img.icons8.com/color/48/jenkins.png'); }
-.logo-falco { background-image: url('https://images.icon-icons.com/2699/PNG/512/falco_logo_icon_171164.png'); }
-.logo-rancher { background-image: url('https://images.icon-icons.com/2699/PNG/512/rancher_logo_icon_169808.png'); }
-.logo-docker { background-image: url('https://img.icons8.com/color/48/docker.png'); }
-.logo-kubernetes { background-image: url('https://img.icons8.com/color/48/kubernetes.png'); }
-.logo-aws { background-image: url('https://img.icons8.com/color/48/amazon-web-services.png'); }
-.logo-prometheus { background-image: url('https://img.icons8.com/color/48/prometheus-app.png'); }
-.logo-grafana { background-image: url('https://img.icons8.com/color/48/grafana.png'); }
-.logo-thanos { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1jOw4UxF-O0__6uaRyVLFdkLpARiPvxb5lg&s'); }
-.logo-ansible { background-image: url('https://img.icons8.com/color/48/ansible.png'); }
-.logo-helm { background-image: url('https://img.icons8.com/color/48/kubernetes.png'); }
+.logo-vmware { background-image: url('../icons/vmware-48.png'); }
+.logo-gitlab { background-image: url('../icons/gitlab-48.png'); }
+.logo-terraform { background-image: url('../icons/terraform-48.png'); }
+.logo-jenkins { background-image: url('../icons/jenkins-48.png'); }
+.logo-falco { background-image: url('../icons/falco-alt.png'); }
+.logo-rancher { background-image: url('../icons/rancher-alt.png'); }
+.logo-docker { background-image: url('../icons/docker-48.png'); }
+.logo-kubernetes { background-image: url('../icons/kubernetes-48.png'); }
+.logo-aws { background-image: url('../icons/aws-48.png'); }
+.logo-prometheus { background-image: url('../icons/prometheus-48.png'); }
+.logo-grafana { background-image: url('../icons/grafana-48.png'); }
+.logo-thanos { background-image: url('../icons/thanos.png'); }
+.logo-ansible { background-image: url('../icons/ansible-48.png'); }
+.logo-helm { background-image: url('../icons/kubernetes-48.png'); }
 
-.logo-argocd { background-image: url('https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbTIbir%2FbtssUMsYzlh%2FAAAAAAAAAAAAAAAAAAAAAJ9VUPh0yfE6yDpRoln3p8ONcNu2uPv4Eg5s5aS-ETrb%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3D07FlpPjqT0ZfYttHpUlzhGN6gC8%253D'); }
-.logo-tanzu { background-image: url('https://avatars.githubusercontent.com/u/54452117?s=280&v=4'); }
-.logo-sonarqube { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRooqdM3ssbj_xcVPp7sqSHVTEnaVRlDCAeUg&s'); }
-.logo-haproxy { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ab/Haproxy-logo.png'); }
-.logo-nsxalb { background-image: url('https://vmusketeers.com/wp-content/uploads/2021/12/unnamed.jpeg'); }
-.logo-certmanager { background-image: url('https://avatars.githubusercontent.com/u/39950598?s=280&v=4'); }
-.logo-contour { background-image: url('https://avatars.githubusercontent.com/u/54918165?v=4&s=400'); }
-.logo-kubebench { background-image: url('https://aquasecurity.github.io/kube-bench/dev/images/kube-bench-logo-only.png'); }
-.logo-trivy { background-image: url('https://desktop.docker.com/extensions/aquasec_trivy-docker-extension/raw_githubusercontent_com/aquasecurity/trivy-docker-extension/main/trivy.svg'); }
-.logo-syft { background-image: url('https://user-images.githubusercontent.com/5199289/136844524-1527b09f-c5cb-4aa9-be54-5aa92a6086c1.png'); }
-.logo-velero { background-image: url('https://miro.medium.com/1*79cVIPhZYd3KA17pFu9kwA.jpeg'); }
-.logo-restic { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrDM_YX-2mnG0XsccWRueE5yISbqufmPhAg&s'); }
+.logo-argocd { background-image: url('../icons/argocd.png'); }
+.logo-tanzu { background-image: url('../icons/tanzu.png'); }
+.logo-sonarqube { background-image: url('../icons/sonarqube-alt.png'); }
+.logo-haproxy { background-image: url('../icons/haproxy-alt.png'); }
+.logo-nsxalb { background-image: url('../icons/nsxalb.jpeg'); }
+.logo-certmanager { background-image: url('../icons/certmanager.png'); }
+.logo-contour { background-image: url('../icons/contour.png'); }
+.logo-kubebench { background-image: url('../icons/kubebench.png'); }
+.logo-trivy { background-image: url('../icons/trivy.svg'); }
+.logo-syft { background-image: url('../icons/syft.png'); }
+.logo-velero { background-image: url('../icons/velero.jpeg'); }
+.logo-restic { background-image: url('../icons/restic.png'); }
 
-.logo-fluentbit { background-image: url('https://pbs.twimg.com/profile_images/1185280338739814402/NnSUVrWU_400x400.jpg'); }
+.logo-fluentbit { background-image: url('../icons/fluentbit-alt.jpg'); }
 
 .tech-item i {
     margin-right: 6px;
@@ -2104,36 +2104,36 @@ blockquote {
     text-align: center;
 }
 
-.si-vmware { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vmware.svg'); }
-.si-kubernetes { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg'); }
-.si-tanzu { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vmware.svg'); }
-.si-rancher { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rancher.svg'); }
-.si-prometheus { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/prometheus.svg'); }
-.si-fluentbit { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/fluentbit.svg'); }
-.si-ansible { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ansible.svg'); }
-.si-sonarqube { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/sonarqube.svg'); }
-.si-falco { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/falco.svg'); }
-.si-kubebench { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg'); }
-.si-syft { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/anchore.svg'); }
-.si-haproxy { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/haproxy.svg'); }
-.si-nsxalb { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vmware.svg'); }
-.si-certmanager { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/letsencrypt.svg'); }
-.si-contour { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/envoyproxy.svg'); }
-.si-velero { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg'); }
-.si-argocd { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/argo.svg'); }
-.si-trivy { background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/aquasecurity.svg'); }
-.si-amazonaws { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg'); }
-.si-docker { background-image: url('https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png'); }
-.si-kubernetes { background-image: url('https://kubernetes.io/images/kubernetes-horizontal-color.png'); }
-.si-rancher { background-image: url('https://rancher.com/img/brand-guidelines/assets/logos/png/color/rancher-logo-cow-color.png'); }
-.si-prometheus { background-image: url('https://prometheus.io/assets/prometheus_logo_grey.svg'); }
-.si-grafana { background-image: url('https://grafana.com/static/img/menu/grafana2.svg'); }
-.si-jenkins { background-image: url('https://www.jenkins.io/images/logos/jenkins/jenkins.svg'); }
-.si-gitlab { background-image: url('https://about.gitlab.com/images/press/logo/svg/gitlab-logo-gray-rgb.svg'); }
-.si-ansible { background-image: url('https://logos-world.net/wp-content/uploads/2021/01/Ansible-Logo.png'); }
-.si-terraform { background-image: url('https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg'); }
-.si-helm { background-image: url('https://helm.sh/img/helm.svg'); }
-.si-sonarqube { background-image: url('https://www.sonarqube.org/logos/index/sonarqube-logo.png'); }
+.si-vmware { background-image: url('../icons/vmware.svg'); }
+.si-kubernetes { background-image: url('../icons/kubernetes.svg'); }
+.si-tanzu { background-image: url('../icons/vmware.svg'); }
+.si-rancher { background-image: url('../icons/rancher.svg'); }
+.si-prometheus { background-image: url('../icons/prometheus.svg'); }
+.si-fluentbit { background-image: url('../icons/fluentbit.svg'); }
+.si-ansible { background-image: url('../icons/ansible.svg'); }
+.si-sonarqube { background-image: url('../icons/sonarqube.svg'); }
+.si-falco { background-image: url('../icons/falco.svg'); }
+.si-kubebench { background-image: url('../icons/kubernetes.svg'); }
+.si-syft { background-image: url('../icons/anchore.svg'); }
+.si-haproxy { background-image: url('../icons/haproxy.svg'); }
+.si-nsxalb { background-image: url('../icons/vmware.svg'); }
+.si-certmanager { background-image: url('../icons/letsencrypt.svg'); }
+.si-contour { background-image: url('../icons/envoyproxy.svg'); }
+.si-velero { background-image: url('../icons/kubernetes.svg'); }
+.si-argocd { background-image: url('../icons/argo.svg'); }
+.si-trivy { background-image: url('../icons/aquasecurity.svg'); }
+.si-amazonaws { background-image: url('../icons/aws-logo.svg'); }
+.si-docker { background-image: url('../icons/docker-logo.png'); }
+.si-kubernetes { background-image: url('../icons/kubernetes-logo.png'); }
+.si-rancher { background-image: url('../icons/rancher-logo.png'); }
+.si-prometheus { background-image: url('../icons/prometheus-logo.svg'); }
+.si-grafana { background-image: url('../icons/grafana-logo.svg'); }
+.si-jenkins { background-image: url('../icons/jenkins-logo.svg'); }
+.si-gitlab { background-image: url('../icons/gitlab-logo.svg'); }
+.si-ansible { background-image: url('../icons/ansible-logo.png'); }
+.si-terraform { background-image: url('../icons/terraform-logo.svg'); }
+.si-helm { background-image: url('../icons/helm-logo.svg'); }
+.si-sonarqube { background-image: url('../icons/sonarqube-logo.png'); }
 
 .cert-grid {
     display: grid;
@@ -2361,12 +2361,12 @@ blockquote {
 
 .cert-item[data-org="VMware"]::before {
     content: "";
-    background-image: url('https://cdn.worldvectorlogo.com/logos/vmware-1.svg');
+    background-image: url('../icons/vmware-logo.svg');
 }
 
 .cert-item[data-org="Linux Foundation"]::before {
     content: "";
-    background-image: url('https://www.linuxfoundation.org/hubfs/lf-stacked-color.png');
+    background-image: url('../icons/linux-foundation.png');
 }
 
 .cert-item > * {
