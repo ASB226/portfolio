@@ -13,76 +13,83 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Initialize scroll animations
-// Initialize scroll animations
+// Initialize scroll animations (Cover page only)
 function initScrollAnimations() {
-    // Process each page separately
-    const pages = document.querySelectorAll('.page');
+    // Only apply to cover page elements
+    const coverPage = document.querySelector('.cover-page');
+    if (!coverPage) return;
     
-    pages.forEach(page => {
-        const selectors = [
-            '.page-header h2',
-            '.page-header h3', 
-            '.page-subtitle',
-            '.achievements-section h4',
-            '.architecture-section h4',
-            '.about-timeline-item',
-            '.introduce-section',
-            '.introduce-content h4',
-            '.introduce-content p',
-            '.skill-category',
-            '.cert-item',
-            '.company-info-plain',
-            '.work-section-plain',
-            '.project-item-plain',
-            '.poc-item',
-            '.project-meta-simple',
-            '.architecture-section',
-            '.architecture-diagram',
-            '.project-objective',
-            '.tech-items',
-            '.achievement-item',
-            '.experience-summary',
-            '.troubleshooting-case',
-            '.case-step',
-            '.customer-count',
-            '.support-card'
-        ];
-        
-        // Collect elements within this page only
-        let pageElements = [];
-        
-        selectors.forEach(selector => {
-            const elements = page.querySelectorAll(selector);
-            elements.forEach(element => {
-                pageElements.push(element);
-            });
+    const selectors = [
+        '.cover-name',
+        '.cover-title', 
+        '.cover-subtitle',
+        '.cover-contact'
+    ];
+    
+    let coverElements = [];
+    
+    selectors.forEach(selector => {
+        const elements = coverPage.querySelectorAll(selector);
+        elements.forEach(element => {
+            coverElements.push(element);
         });
-        
-        // Sort elements by their position within the page
-        pageElements.sort((a, b) => {
-            const position = a.compareDocumentPosition(b);
-            if (position & Node.DOCUMENT_POSITION_FOLLOWING) {
-                return -1;
-            } else if (position & Node.DOCUMENT_POSITION_PRECEDING) {
-                return 1;
-            }
-            return 0;
-        });
-        
-        // Apply animation classes with reset delay per page
-        pageElements.forEach((element, index) => {
-            element.classList.add('fade-in-element');
-            element.style.transitionDelay = `${index * 0.01}s`;
-            observer.observe(element);
-        });
-        
-        console.log(`Page ${page.className}: ${pageElements.length} elements`);
     });
+    
+    // Sort elements by their position within the cover page
+    coverElements.sort((a, b) => {
+        const position = a.compareDocumentPosition(b);
+        if (position & Node.DOCUMENT_POSITION_FOLLOWING) {
+            return -1;
+        } else if (position & Node.DOCUMENT_POSITION_PRECEDING) {
+            return 1;
+        }
+        return 0;
+    });
+    
+    // Apply animation classes only to cover page elements
+    coverElements.forEach((element, index) => {
+        element.classList.add('fade-in-element');
+        element.style.transitionDelay = `${index * 0.2}s`;
+        observer.observe(element);
+    });
+    
+    console.log(`Cover page: ${coverElements.length} elements`);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize scroll animations
     initScrollAnimations();
+    
+    // Auto-hide Navigation
+    const nav = document.querySelector('.top-nav');
+    const coverPage = document.querySelector('.cover-page');
+    let isOnCoverPage = true;
+    
+    // Check if user is on cover page
+    function checkCoverPage() {
+        const coverRect = coverPage.getBoundingClientRect();
+        const isCurrentlyOnCover = coverRect.bottom > window.innerHeight * 0.5;
+        
+        if (isCurrentlyOnCover !== isOnCoverPage) {
+            isOnCoverPage = isCurrentlyOnCover;
+            
+            if (isOnCoverPage) {
+                // On cover page - show nav normally
+                nav.classList.remove('nav-hidden');
+                nav.classList.remove('nav-hover-reveal');
+            } else {
+                // Not on cover page - hide nav and enable hover reveal
+                nav.classList.add('nav-hidden');
+                nav.classList.add('nav-hover-reveal');
+            }
+        }
+    }
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', checkCoverPage);
+    
+    // Initial check
+    checkCoverPage();
     
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
