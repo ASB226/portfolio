@@ -469,11 +469,22 @@
                     <div class="architecture-diagram">
                         <img src="images/architecture1.png" alt="VMware Tanzu Management Cluster Architecture" class="architecture-image">
                     </div>
-                    <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">인프라 레이어:</strong>VMware ESXi 하이퍼바이저+vCenter 통합 관리 콘솔+Virtual SAN 환경 구성으로, 가상화 및 스토리지 통합</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">오케스트레이션 레이어:</strong>중앙관리용 Supervisor 클러스터 및 Workload Cluster 구성 (Control plane 3EA, Worker 9EA)</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">애플리케이션 레이어:</strong>모니터링, 로깅, 백업, 보안을 위한 오픈소스 및 DevOps 도구들을 활용하여 컨테이너 운영 환경 구축</p>
+                <div class="achievements-section">
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">인프라 레이어</strong></div>
+                            <div class="achievement-desc">• VMware vSphere: ESXi 하이퍼바이저 기반 가상화 플랫폼, vCenter 중앙 관리<br>• vSAN Storage: Virtual SAN 클러스터 기반 분산 스토리지 환경<br>• 하드웨어: Dell 서버</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">플랫폼 레이어</strong></div>
+                            <div class="achievement-desc">• VMware Tanzu: vSphere with Tanzu 기반 Kubernetes 통합 플랫폼<br>• Supervisor Cluster: 중앙관리용 클러스터 및 멀티 네임스페이스 관리<br>• Workload Cluster: Control Plane 3EA, Worker 9EA 구성의 워크로드 전용 클러스터</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">애플리케이션 레이어</strong></div>
+                            <div class="achievement-desc">• 모니터링: Prometheus 메트릭 수집, Grafana 시각화 대시보드<br>• 보안: Falco 런타임 보안, Trivy 취약점 스캔, Kube-bench 보안 검증<br>• DevOps: ArgoCD GitOps, Jenkins CI/CD, Harbor 컨테이너 레지스트리<br>• 운영도구: Kubernetes Dashboard 관리, Velero 백업, Cert-manager 인증서 관리</div>
+                        </div>
                     </div>
+                </div>
                 </div>
                 
                 <div class="architecture-section">
@@ -544,11 +555,22 @@
                     <div class="architecture-diagram">
                         <img src="images/AI_Datacenter_arcitecture.png" alt="AI Data Center Architecture" class="architecture-image">
                     </div>
-                    <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">인프라 레이어:</strong>VMware vSphere 기반 프라이빗 클라우드 인프라 구축</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">오케스트레이션 레이어:</strong>10 Node 규모 Kubernetes 클러스터 및 NVIDIA GPU Operator 구성</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">애플리케이션 레이어:</strong>vGPU 기반 AI/ML 워크로드 최적화 환경 구성</p>
+                <div class="achievements-section">
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">인프라 레이어</strong></div>
+                            <div class="achievement-desc">• VMware vSphere: ESXi 하이퍼바이저 기반 가상화 플랫폼, vCenter 중앙 관리<br>• vSphere + Virtual SAN Cluster: 분산 스토리지 및 컴퓨팅 리소스 통합 관리<br>• 물리 인프라: 빅데이터 분석 서버 및 AI 분석 서버 클러스터 구성</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">플랫폼 레이어</strong></div>
+                            <div class="achievement-desc">• VMware Tanzu: vSphere with Tanzu 기반 Kubernetes 통합 플랫폼<br>• Supervisor Cluster: 중앙관리용 클러스터 및 Supervisor Namespace 관리<br>• Kubernetes Cluster: Control Plane VM 3EA, Worker VM 3EA 구성의 워크로드 클러스터<br>• VDI Resource Pool: VMware Horizon 기반 가상 데스크톱 인프라</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">애플리케이션 레이어</strong></div>
+                            <div class="achievement-desc">• 모니터링: Prometheus 메트릭 수집, Grafana 시각화, FluentBit 로깅<br>• AI/ML: NVIDIA GPU Operator, Cert-manager, TensorFlow 기반 AI 워크로드<br>• 보안: Falco 런타임 보안, Trivy 취약점 스캔, Harbor 컨테이너 레지스트리<br>• 인프라 서비스: Docker 컨테이너 런타임, Helm 패키지 관리, Terraform IaC<br>• 기타 서비스: MS SQL, Active Directory, DNS, NTP, NSX-ALB, vCenter, Bootstrap, Veeam 백업</div>
+                        </div>
                     </div>
+                </div>
                 </div>
                 
                 <div class="architecture-section">
