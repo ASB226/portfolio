@@ -181,29 +181,55 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 스크롤 시 활성 네비게이션 업데이트
     function updateActiveNav() {
+        const scrollY = window.scrollY;
         let current = 0;
-        const scrollY = window.scrollY + window.innerHeight / 2;
         
-        pages.forEach((page, index) => {
-            const pageTop = page.offsetTop;
-            const pageBottom = pageTop + page.offsetHeight;
-            
-            if (scrollY >= pageTop && scrollY < pageBottom) {
-                current = index;
+        // 각 페이지의 위치를 확인하여 현재 보이는 섹션 찾기
+        for (let i = pages.length - 1; i >= 0; i--) {
+            const page = pages[i];
+            if (page && scrollY >= page.offsetTop - 200) {
+                current = i;
+                break;
             }
-        });
+        }
         
         // 도트 업데이트
         navDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === current);
+            if (index === current) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
         });
         
-        // 상단 메뉴 업데이트
-        navItems.forEach((item, index) => {
-            item.classList.toggle('active', index === current);
-        });
+        // 상단 메뉴 업데이트 (있는 경우에만)
+        if (navItems.length > 0) {
+            navItems.forEach((item, index) => {
+                if (index === current) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
     }
     
-    window.addEventListener('scroll', updateActiveNav);
-    updateActiveNav(); // 초기 실행
+    // 스크롤 이벤트를 throttle하여 성능 개선
+    let ticking = false;
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateActiveNav();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', onScroll);
+    
+    // 페이지 로드 시 초기 실행
+    document.addEventListener('DOMContentLoaded', updateActiveNav);
+    setTimeout(updateActiveNav, 500); // 확실히 로드된 후 실행
 });

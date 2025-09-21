@@ -68,8 +68,9 @@ body {
 /* Cover Page */
 .cover-page {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 20%, #ffffff 40%, #f5f6f8 60%, #f0f2f5 80%, #eef1f5 100%);
-    margin-bottom: 40px;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .cover-page::before {
@@ -204,7 +205,6 @@ body {
     font-size: 84px;
     font-weight: 400;
     margin: 0;
-    margin-top: 80px;
     letter-spacing: -0.03em;
 }
 
@@ -2395,7 +2395,7 @@ blockquote {
 
 /* Bottom Right Section */
 .bottom-right-section {
-    margin-top: -10px;
+    margin-top: -30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -2939,6 +2939,7 @@ blockquote {
     font-size: 14px;
     color: #86868b;
     font-weight: 300;
+    margin-bottom: -30px;
 }
 
 /* Final Page Header Font Size Override */
@@ -3006,4 +3007,33 @@ section .page-header h2,
     .cover-contact-update {
         font-size: 13px;
     }
+}
+/* Back to Home Button */
+.back-to-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 122, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background: rgba(0, 122, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
 }

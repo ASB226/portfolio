@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>안수빈 - DevOps Engineer Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" as="style" crossorigin href="fonts/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="home-link">
+                    <i class="fas fa-home"></i> HOME
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item active" data-page="0">ABOUT</a>
+                <a href="#" class="nav-item" data-page="1">SKILL</a>
+                <a href="#" class="nav-item" data-page="2">EXPERIENCE</a>
+                <a href="#" class="nav-item" data-page="3">PROJECT 1</a>
+                <a href="#" class="nav-item" data-page="4">PROJECT 2</a>
+                <a href="#" class="nav-item" data-page="5">SUPPORT</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="mobile-menu-dropdown">
+                <a href="#" class="nav-item active" data-page="0">ABOUT</a>
+                <a href="#" class="nav-item" data-page="1">SKILL</a>
+                <a href="#" class="nav-item" data-page="2">EXPERIENCE</a>
+                <a href="#" class="nav-item" data-page="3">PROJECT 1</a>
+                <a href="#" class="nav-item" data-page="4">PROJECT 2</a>
+                <a href="#" class="nav-item" data-page="5">SUPPORT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navigation Dots -->
+    <div class="navigation">
+        <div class="nav-dot active" data-page="0" title="About Me"></div>
+        <div class="nav-dot" data-page="1" title="Skills & Certifications"></div>
+        <div class="nav-dot" data-page="2" title="Work Experience"></div>
+        <div class="nav-dot" data-page="3" title="Project 1"></div>
+        <div class="nav-dot" data-page="4" title="Project 2"></div>
+        <div class="nav-dot" data-page="5" title="Technical Support"></div>
+    </div>
+
+    <!-- Page 1: About Me -->
+    <section class="page about-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>About Me</h2>
+                <div class="subcard-divider"></div>
+                <p class="page-subtitle">학력 | 수료교육 | 경력</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>안정적인 시스템, 지속 가능한 환경을 만드는 엔지니어</h3>
+                        <p>3년간의 클라우드·쿠버네티스 엔지니어 경험을 바탕으로, 안정적이고 확장 가능한 인프라를 구축하고 운영하는 것을 목표로 합니다. 최신 클라우드 네이티브 기술을 적극적으로 내재화하고, 더 견고하고 확장성 있는 인프라를 만들어가는 엔지니어입니다.</p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h4><i class="fas fa-graduation-cap"></i> 학력</h4>
+                            <p>한국교통대학교 컴퓨터공학과 (2018.03 - 2024.02)</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h4><i class="fas fa-certificate"></i> 수료교육</h4>
+                            <p>클라우드 네이티브 엔지니어 양성과정 (2022.03 - 2022.08)</p>
+                            <p>Kubernetes 전문가 과정 (2022.09 - 2022.12)</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h4><i class="fas fa-briefcase"></i> 경력</h4>
+                            <p>굿모닝아이텍(주) - 시스템 엔지니어 (2022.01 - 현재)</p>
+                            <p>클라우드 인프라 구축 및 컨테이너 플랫폼 운영</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="images/photo1.png" alt="Profile Photo" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

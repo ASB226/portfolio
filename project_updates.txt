@@ -1,0 +1,109 @@
+                <div class="achievements-section">
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">인프라 레이어</strong></div>
+                            <div class="achievement-desc">• VMware vSphere: ESXi 하이퍼바이저 기반 가상화 플랫폼, vCenter 중앙 관리<br>• vSAN Storage: Virtual SAN 클러스터 기반 분산 스토리지 환경<br>• 하드웨어: Dell 서버</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">플랫폼 레이어</strong></div>
+                            <div class="achievement-desc">• VMware Tanzu: vSphere with Tanzu 기반 Kubernetes 통합 플랫폼<br>• Supervisor Cluster: 중앙관리용 클러스터 및 멀티 네임스페이스 관리<br>• Workload Cluster: Control Plane 3EA, Worker 9EA 구성의 워크로드 전용 클러스터</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">애플리케이션 레이어</strong></div>
+                            <div class="achievement-desc">• 모니터링: Prometheus 메트릭 수집, Grafana 시각화 대시보드<br>• 보안: Falco 런타임 보안, Trivy 취약점 스캔, Kube-bench 보안 검증<br>• DevOps: ArgoCD GitOps, Jenkins CI/CD, Harbor 컨테이너 레지스트리<br>• 운영도구: Kubernetes Dashboard 관리, Velero 백업, Cert-manager 인증서 관리</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="architecture-section">
+                    <h4 style="font-size: 24px; margin-top: 35px;">Workflow</h4>
+                    <div class="architecture-diagram">
+                        <img src="images/architecture2.png" alt="VMware Tanzu Workload Cluster Architecture" class="architecture-image">
+                    </div>
+                    <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">요청-승인:</strong>컨테이너 관리 포털 연동을 통해 개발환경 제공 (사용자 요청 → 관리자 승인 → 리소스 할당)</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">개발-배포:</strong>Git → Jenkins → Harbor → ArgoCD GitOps 배포</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">운영-관리:</strong>모니터링, 로깅, 백업 및 소스코드, 컨테이너, 클러스터, 런타임 수준의 보안을 고려한 환경 구성</p>
+                    </div>
+                </div>
+                
+                <div class="achievements-section">
+                    <h4 style="font-size: 24px; margin-top: 35px;">주요 성과</h4>
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number"><i class="fas fa-chart-line"></i></div>
+                            <div class="achievement-desc">기존 VM 기반 인프라 대비 리소스 효율성 40% 향상</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number"><i class="fas fa-user-friends"></i></div>
+                            <div class="achievement-desc">운영 인력 2명으로 140대 이상의 컨테이너 관리, 추후 증설로 200대 이상 관리 구현</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number"><i class="fas fa-clock"></i></div>
+                            <div class="achievement-desc">연구환경 프로비저닝 시간을 45분→25분으로 단축하여 개발환경 생산성 향상</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Divider -->
+    <div class="page-divider"></div>
+
+    <!-- Page 6: Project 2 -->
+    <section class="page project-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>Project 2</h2>
+                <div class="subcard-divider" style="margin-bottom: 20px;"></div>
+                <h3 style="text-align: left; color: #000000; margin-top: 0; margin-bottom: 10px;">국내 사립대학 교육/연구용 AI데이터센터 구축</h3>
+            </div>
+            <div class="project-content" style="margin-top: -40px;">
+                <div class="project-overview">
+                    <div class="project-meta-simple">
+                        <p><strong>기간:</strong> 2023.11 - 2023.12</p>
+                        <p><strong>역할:</strong> 시스템 엔지니어</p>
+                        <p><strong>참여인원:</strong> 3명</p>
+                        <p><strong>기여도:</strong> 80%</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="architecture-section">
+                    <h4 style="margin-bottom: 5px; font-size: 24px; margin-top: 35px;">Architecture</h4>
+                    <div class="tech-items" style="margin: 5px 0;">
+                        <span class="tech-item vmware"><span class="logo-icon logo-vmware"></span>VMware</span>
+                        <span class="tech-item kubernetes"><span class="tech-icon">⚙</span>Kubernetes</span>
+                        <span class="tech-item gpu"><span class="tech-icon">🔧</span>vGPU</span>
+                        <span class="tech-item ai"><span class="tech-icon">🤖</span>AI/ML</span>
+                        <span class="tech-item airgap"><span class="tech-icon">🔒</span>Air-Gap</span>
+                        <span class="tech-item monitoring"><span class="tech-icon">📈</span>Monitoring</span>
+                    </div>
+                    <div class="architecture-diagram">
+                        <img src="images/AI_Datacenter_arcitecture.png" alt="AI Data Center Architecture" class="architecture-image">
+                    </div>
+                <div class="achievements-section">
+                    <div class="achievement-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">인프라 레이어</strong></div>
+                            <div class="achievement-desc">• VMware vSphere: ESXi 하이퍼바이저 기반 가상화 플랫폼, vCenter 중앙 관리<br>• vSphere + Virtual SAN Cluster: 분산 스토리지 및 컴퓨팅 리소스 통합 관리<br>• 물리 인프라: 빅데이터 분석 서버 및 AI 분석 서버 클러스터 구성</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">플랫폼 레이어</strong></div>
+                            <div class="achievement-desc">• VMware Tanzu: vSphere with Tanzu 기반 Kubernetes 통합 플랫폼<br>• Supervisor Cluster: 중앙관리용 클러스터 및 Supervisor Namespace 관리<br>• Kubernetes Cluster: Control Plane VM 3EA, Worker VM 3EA 구성의 워크로드 클러스터<br>• VDI Resource Pool: VMware Horizon 기반 가상 데스크톱 인프라</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number" style="min-width: 140px; text-align: center;"><strong style="color: #007aff; font-weight: 600; font-size: 16px;">애플리케이션 레이어</strong></div>
+                            <div class="achievement-desc">• 모니터링: Prometheus 메트릭 수집, Grafana 시각화, FluentBit 로깅<br>• AI/ML: NVIDIA GPU Operator, Cert-manager, TensorFlow 기반 AI 워크로드<br>• 보안: Falco 런타임 보안, Trivy 취약점 스캔, Harbor 컨테이너 레지스트리<br>• 인프라 서비스: Docker 컨테이너 런타임, Helm 패키지 관리, Terraform IaC<br>• 기타 서비스: MS SQL, Active Directory, DNS, NTP, NSX-ALB, vCenter, Bootstrap, Veeam 백업</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="architecture-section">
+                    <h4 style="font-size: 24px; margin-top: 35px;">Workflow</h4>
+                    <div class="architecture-diagram">
+                        <img src="images/AI:ML_Workflow_architecture.png" alt="AI/ML Workflow Architecture" class="architecture-image">
+                    </div>
