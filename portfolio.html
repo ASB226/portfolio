@@ -200,12 +200,12 @@
                 </div>
                 <div class="cert-grid">
                     <div class="cert-item animate-in" data-org="Linux Foundation">
-                        <div class="cert-name">Certified Kubernetes Security Specialist (CKS)</div>
+                        <div class="cert-name">Certified Kubernetes Security Specialist (CKS)<br><br></div>
                         <div class="cert-org">The Linux Foundation</div>
                         <div class="cert-date">2025.09</div>
                     </div>
                     <div class="cert-item animate-in" data-org="Linux Foundation">
-                        <div class="cert-name">Certified Kubernetes Application Developer (CKAD)</div>
+                        <div class="cert-name">Certified Kubernetes Application Developer (CKAD)<br><br></div>
                         <div class="cert-org">The Linux Foundation</div>
                         <div class="cert-date">2024.04</div>
                     </div>
@@ -215,7 +215,7 @@
                         <div class="cert-date">2023.06</div>
                     </div>
                     <div class="cert-item animate-in" data-org="Linux Foundation">
-                        <div class="cert-name">Certified Kubernetes Administrator (CKA)</div>
+                        <div class="cert-name">Certified Kubernetes Administrator (CKA)<br><br></div>
                         <div class="cert-org">The Linux Foundation</div>
                         <div class="cert-date">2023.05</div>
                     </div>
@@ -270,7 +270,7 @@
                                 <div>• 자동차 연구소 컨테이너 플랫폼</div>
                                 <div>• S사 문화재단 VMware 가상화 시스템</div>
                                 <div>• 글로벌 자동차 금융사 VMware 가상화 시스템</div>
-                                <div>• 교육출판 전문기업 VMware 가상화 시스템</div>
+                                <div>• 교육출판사 VMware 가상화 시스템</div>
                                 <div>• 공공 의료기관 암빅데이터센터 Kubernetes 플랫폼</div>
                                 <div>• 공공 의료기관 암지식정보센터 VMware 가상화 시스템</div>
                                 <div>• 택배/물류사 국내외 SR 시스템 Kubernetes 플랫폼</div>
@@ -278,11 +278,11 @@
                                 <div>• 공공 의료기관 인증기관 VMware 가상화 시스템</div>
                                 <div>• 국내 손해보험사 재택/콜센터/인터넷망 VDI 시스템</div>
                                 <div>• 국내 중견 철강사 업무망 VDI 시스템</div>
-                                <div>• 국내 이커머스사 망분리 사업 업무망 VDI 시스템</div>
+                                <div>• 국내 이커머스사 업무망 VDI 시스템</div>
                                 <div>• F 시험연구원 업무망 VDI 시스템</div>
                                 <div>• 방송사 업무망 VDI 시스템</div>
                                 <div>• 공공 치안기관 민원상담 콜센터 VDI 시스템</div>
-                                <div>• 대기업 반도체 전사 VDI 프로젝트건 - 이천, 청주 업무/보안망 인프라 시스템 운영</div>
+                                <div>• 반도체 대기업 전사(이천/청주) 업무•보안망 VDI 인프라 시스템 운영</div>
                             </div>
                         </div>
                     </div>
@@ -412,9 +412,38 @@
                         <img src="images/architecture1.png" alt="VMware Tanzu Management Cluster Architecture" class="architecture-image">
                     </div>
                     <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">인프라 레이어:</strong>VMware ESXi 하이퍼바이저+vCenter 통합 관리 콘솔+Virtual SAN 환경 구성으로, 가상화 및 스토리지 통합</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">오케스트레이션 레이어:</strong>중앙관리용 Supervisor 클러스터 및 Workload Cluster 구성 (Control plane 3EA, Worker 9EA)</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">애플리케이션 레이어:</strong>모니터링, 로깅, 백업, 보안을 위한 오픈소스 및 DevOps 도구들을 활용하여 컨테이너 운영 환경 구축</p>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">인프라 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• ESXi 하이퍼바이저 기반 가상화 인프라 구축 및 vCenter 서버 중앙집중식 관리 환경 구성<br>
+                                • vSAN 스토리지 가상화로 각 서버의 로컬 디스크를 단일 스토리지 풀로 생성, 기존 공유 스토리지 대체<br>
+                                • HA/DRS 클러스터링 및 vMotion 기술로 무중단 서비스 및 자동 장애복구 체계 구성</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">플랫폼 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• Ansible을 통한 Kubernetes 클러스터 프로비저닝 및 구성 관리 자동화<br>
+                                • 다중 Kubernetes 클러스터 중앙 관리용도의 Supervisor 클러스터 및 Workload 클러스터 구성<br>
+                                • 롤링 업그레이드 및 장애 상황, 리소스 부족 시 추가 배포를 고려한 스펙으로 노드 구성<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;(Control Plane 3EA, Worker 9EA / 각 Worker 스펙: 60 vCPU, 180 MEM, 4.5TB)<br>
+                                • 네임스페이스 기반 멀티테넌시와 RBAC을 통한 보안 격리 및 리소스 관리 시스템 구축</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">애플리케이션 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• Jenkins, GitLab, ArgoCD 기반 CI/CD 파이프라인 구축 및 컨테이너 레지스트리 Harbor 연동으로 개발-배포 자동화 환경 구성<br>
+                                • Prometheus, Grafana, Thanos를 활용한 통합 모니터링 시스템 및 Fluent Bit 로깅, Kubernetes Dashboard를 통한 클러스터 관리 환경 구축<br>
+                                • 보안 스캐닝(Trivy, Syft), 런타임 보안(Falco), 백업(Velero, Restic) 구성으로 운영 보안 체계 구현</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -425,8 +454,8 @@
                     </div>
                     <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
                         <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">요청-승인:</strong>컨테이너 관리 포털 연동을 통해 개발환경 제공 (사용자 요청 → 관리자 승인 → 리소스 할당)</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">개발-배포:</strong>Git → Jenkins → Harbor → ArgoCD GitOps 배포</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">운영-관리:</strong>모니터링, 로깅, 백업 및 소스코드, 컨테이너, 클러스터, 런타임 수준의 보안을 고려한 환경 구성</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">개발-배포:</strong>Git 소스코드 커밋 → CI/CD 파이프라인 → 컨테이너 이미지 빌드 → 자동 배포 프로세스</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">운영-관리:</strong>Ansible을 통한 Kubernetes 구성 자동화 및 오픈소스를 활용한 통합 모니터링, 로그 수집, 클러스터 관리, 백업 환경 구성 → 통합 운영 환경 구성</p>
                     </div>
                 </div>
                 
@@ -487,9 +516,37 @@
                         <img src="images/AI_Datacenter_arcitecture.png" alt="AI Data Center Architecture" class="architecture-image">
                     </div>
                     <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">인프라 레이어:</strong>VMware vSphere 기반 프라이빗 클라우드 인프라 구축</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">오케스트레이션 레이어:</strong>10 Node 규모 Kubernetes 클러스터 및 NVIDIA GPU Operator 구성</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">애플리케이션 레이어:</strong>vGPU 기반 AI/ML 워크로드 최적화 환경 구성</p>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">인프라 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• ESXi 하이퍼바이저 기반 가상화 인프라 구축 및 vCenter 서버 중앙집중식 관리 환경 구성<br>
+                                • vSAN 스토리지 가상화로 각 서버의 로컬 디스크를 단일 스토리지 풀로 생성, 기존 공유 스토리지 대체<br>
+                                • 컨테이너 환경 접속 용도의 Horizon 가상 데스크톱 솔루션 구성</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">플랫폼 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• Terraform을 활용해 VM 배포 자동화 구성 및 컨테이너 접속 환경 세팅<br>
+                                • GPU Passthrough 방식의 Worker 노드 구성 및 NVIDIA GPU Operator를 배포를 통해 RTX A5000 모델 활용한 AI 워크로드 실행 환경 구성<br>
+                                • Veeam 백업 솔루션을 통한 플랫폼 레벨 백업 체계 구성</p>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <span class="layer-text">애플리케이션 레이어</span>
+                            </div>
+                            <div class="achievement-content">
+                                <p>• Harbor 컨테이너 레지스트리 기반 이미지 관리, Trivy 보안 스캐닝 연동 및 Helm을 통한 Kubernetes 애플리케이션 패키지 배포<br>
+                                • Prometheus/Grafana 통합 모니터링, Fluent Bit 로그 수집 및 Aria for logs 제품 연동<br>
+                                • 컨테이너 환경에서 RTX A5000 모델을 활용한 AI 워크로드(PyTorch, TensorFlow) 실행 검증<br>
+                                • Cert-manager 인증서 관리, Velero 클러스터 백업 구성</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -499,9 +556,9 @@
                         <img src="images/AI:ML_Workflow_architecture.png" alt="AI/ML Workflow Architecture" class="architecture-image">
                     </div>
                     <div class="project-objective" style="font-size: 16px; text-align: left; line-height: 1.5; color: #1d1d1f;">
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">GPU 리소스 관리:</strong>vGPU 가상화를 통한 GPU 리소스 효율적 분배</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">워크로드 스케줄링:</strong>AI/ML 작업에 최적화된 리소스 할당 및 스케줄링</p>
-                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">통합 관리:</strong>VM과 컨테이너 환경의 단일 플랫폼 통합 관리</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">접속-인증:</strong>VDI Client를 통한 사용자 접속 및 Active Directory 인증을 통해 가상 데스크톱 환경에서 컨테이너 환경 접속 제공</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">관리-배포:</strong>Terraform VM 배포 자동화 및 Tanzu 솔루션, 오픈소스를 활용한 클러스터 운영 관리</p>
+                        <p style="margin: 8px 0;"><i class="fas fa-check" style="color: #007aff; margin-right: 8px;"></i><strong style="color: #007aff; font-weight: 600; margin-right: 8px;">워크로드 스케줄링:</strong>Kubernetes 환경에서의 개발 환경 및 GPU 활용 AI 프레임워크, 데이터 분석 도구 제공</p>
                     </div>
                 </div>
                 
@@ -509,16 +566,16 @@
                     <h4 style="font-size: 24px; margin-top: 35px;">주요 성과</h4>
                     <div class="achievement-grid">
                         <div class="achievement-item">
-                            <div class="achievement-number"><i class="fas fa-server"></i></div>
-                            <div class="achievement-desc">320Core 규모 10 Node 클러스터 구축</div>
-                        </div>
-                        <div class="achievement-item">
                             <div class="achievement-number"><i class="fas fa-layer-group"></i></div>
-                            <div class="achievement-desc">VM과 컨테이너 단일 플랫폼 통합 관리</div>
+                            <div class="achievement-desc">가상화, 스토리지, VDI, Kubernetes 통합 운영 환경 구성으로 단일 플랫폼 관리 체계 실현</div>
                         </div>
                         <div class="achievement-item">
                             <div class="achievement-number"><i class="fas fa-microchip"></i></div>
-                            <div class="achievement-desc">GPU 가상화를 통한 AI/ML 워크로드 효율성 향상</div>
+                            <div class="achievement-desc">GPU Passthrough 방식 및 NVIDIA GPU Operator 배포를 통한 Kubernetes GPU 리소스 관리 및 할당 환경 구현</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number"><i class="fas fa-cogs"></i></div>
+                            <div class="achievement-desc">Terraform 기반 VM 배포 자동화로 기존 학습 환경 대비 개발 환경 프로비저닝 시간 70% 단축<br>통합 모니터링, 로깅, 백업 체계 구축으로 시스템 안정성 및 운영 관리 효율성 개선</div>
                         </div>
                     </div>
                 </div>
@@ -533,35 +590,168 @@
     <section class="page support-page" id="support">
         <div class="container">
             <div class="page-header">
-                <h2>기술지원 & 장애 해결 사례</h2>
+                <h2>기술지원 & 장애 해결 사례 1</h2>
             </div>
             <div class="support-content">
-                <div class="experience-summary">
-                    <h3>운영 경험 요약</h3>
-                    <p>3년간 금융·제조·공공 등 다양한 산업군 고객 대상 Kubernetes 기술지원</p>
-                    <div class="customer-count">
-                        <span class="count-number">12개</span>
-                        <span class="count-desc">기업의 인프라 유지보수 및 기술지원 경험</span>
-                    </div>
-                </div>
                 
                 <div class="troubleshooting-case">
-                    <h3>대표적인 장애 해결 사례</h3>
                     <div class="case-study">
                         <div class="case-step">
                             <h4>상황</h4>
-                            <p>대기업 자동차 연구소에서 Kubernetes 클러스터의 Pod 스케줄링 실패로 인한 서비스 중단 발생</p>
+                            <p>Object Storage 기반 PV의 간헐적 연결 실패로 인한 Kubernetes 환경 서비스 중단 발생</p>
+                            <ul>
+                                <li><strong>초기 증상:</strong> vSAN File Service 기반 PV 사용 Pod의 간헐적 연결 실패, 기존 정상 Pod도 스토리지 연결 해제되며 비정상 종료</li>
+                                <li><strong>임시 조치:</strong> CSI Controller 재시작 시 일시 정상화되나, 일정 시간 경과 후 재발하는 패턴 반복</li>
+                                <li><strong>환경:</strong> VMware 가상화 인프라 + vSAN 분산 스토리지 + Tanzu Kubernetes 통합 환경</li>
+                            </ul>
                         </div>
+                        
                         <div class="case-step">
                             <h4>원인 분석</h4>
-                            <p>Node의 리소스 부족과 Taint/Toleration 설정 오류로 인한 Pod 배치 불가 상태 확인</p>
+                            <p><strong>주요 원인</strong></p>
+                            <ul>
+                                <li><strong>하이퍼바이저 소프트웨어 버그:</strong> VMware ESXi 7.0 Update 3f 버전 스토리지 객체 처리 로직 오류로 Unknown Object 계속 생성</li>
+                                <li><strong>vSAN 성능 저하:</strong> Unknown Object 누적으로 분산 스토리지 불안정, PV 연결 실패 발생</li>
+                                <li><strong>패치 진행 불가:</strong> Unknown Object 대량 존재로 vSAN 사전 호환성 검증 실패, 버그 해결된 버전으로의 패치 작업 진행 불가</li>
+                            </ul>
+                            
+                            <p><strong>장애 확산 과정</strong></p>
+                            <ol>
+                                <li>초기 증상: vSAN File Service 기반 PV 간헐적 연결 실패 → 기존 Pod 스토리지 연결 해제</li>
+                                <li>패치 시도: 하이퍼바이저 버그 해결을 위한 업그레이드 진행</li>
+                                <li>패치 불가: Unknown Object 다수 존재로 vSAN 사전 호환성 검증 실패</li>
+                                <li>Unknown Object 삭제 및 하이퍼바이저 패치 진행</li>
+                                <li>패치 중 장애: VM 마이그레이션 실패, 호스트 응답 없음, 네트워크 성능 저하 등 복합 이슈 발생</li>
+                                <li>장애 확산 및 서비스 중단: 패치중 Control Plane 1대·Worker Node 3대 손실 발생, 노드 자동 복구 기능이 트리거 실패하며 Tanzu Kubernetes 기능 hang 상태 지속</li>
+                                <li>Kubernetes 배포용 OS 이미지 손실 인식: Unknown Object 삭제 중 Kubernetes 배포용 OS 이미지를 관리하는 Content Library 파일이 삭제되는 이슈 발생</li>
+                            </ol>
+                            <p style="margin-top: 16px; margin-left: 20px; font-weight: 600; color: #d32f2f;">→ vSAN 데이터스토어 접근 불가 및 Kubernetes 클러스터 접근을 포함한 모든 PV 사용 애플리케이션 동작 중단</p>
                         </div>
+                        
                         <div class="case-step">
                             <h4>해결 과정</h4>
+                            <p><strong>1단계: 긴급 대응 및 자체 조치</strong></p>
+                            <ul>
+                                <li>VMware 기술지원 심각도 1 케이스 오픈, 원격 지원 요청</li>
+                                <li>내부 가능 범위 우선 대응으로 복구 시간 단축</li>
+                                <li>vSAN 관리 서비스(vsanmgmtd, osfsd) 재시작, vCenter vpxd 서비스 재부팅</li>
+                                <li>네트워크 레벨 이슈 해결 (NIC 성능 저하, vDS 포트 불일치)</li>
+                                <li>CSI 드라이버 업그레이드 및 Supervisor 클러스터 레벨 트러블슈팅, 장애 영향 범위 파악</li>
+                            </ul>
+                            
+                            <p><strong>2단계: 벤더 협력 통한 시스템 복구</strong></p>
+                            <ul>
+                                <li>vSAN File Service 재구성: VMware 엔지니어 가이드로 기존 구성 삭제 후 재배포</li>
+                                <li>Content Library 복구: 새 Kubernetes 노드 배포 이미지 업로드</li>
+                                <li>Kubernetes 클러스터 재구성: 기존 노드 유지하며 롤링 업데이트 트리거</li>
+                            </ul>
+                            
+                            <p><strong>3단계: 서비스 정상화 검증</strong></p>
+                            <ul>
+                                <li>신규 PV 생성 및 Pod 스토리지 연결 기능 복구 확인</li>
+                                <li>애플리케이션 정상 동작 테스트 완료</li>
+                            </ul>
                         </div>
+                        
                         <div class="case-step">
                             <h4>결과 및 예방책</h4>
-                            <p>서비스 정상화 및 모니터링 알림 시스템 구축으로 유사 장애 사전 예방</p>
+                            <p><strong>성과</strong></p>
+                            <ul>
+                                <li><strong>서비스 복구:</strong> Kubernetes 서비스 및 애플리케이션, 스토리지 시스템 정상화</li>
+                                <li><strong>데이터 보호:</strong> 대부분의 PV 데이터 손실 없이 복구 (일부 vSAN File Service 기반 RWX 볼륨 손실)</li>
+                            </ul>
+                            
+                            <p><strong>예방책</strong></p>
+                            <ul>
+                                <li><strong>스토리지 모니터링 강화:</strong> CSI 드라이버 상태 및 PV 연결 상태 알림 환경 구성</li>
+                                <li><strong>Unknown Object 관리 프로세스 수립:</strong> 안전한 식별 및 삭제 절차 문서화</li>
+                                <li><strong>정기점검 항목 추가 및 근본 원인 분석:</strong> Unknown Object 모니터링 및 vSAN object 이슈 근본 원인 확인을 위한 벤더 분석 요청</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Divider -->
+    <div class="page-divider"></div>
+
+    <!-- Page 8: Technical Support & Troubleshooting Case 2 -->
+    <section class="page support-page" id="support2">
+        <div class="container">
+            <div class="page-header">
+                <h2>기술지원 & 장애 해결 사례 2</h2>
+            </div>
+            <div class="support-content">
+                
+                <div class="troubleshooting-case">
+                    <div class="case-study">
+                        <div class="case-step">
+                            <h4>상황</h4>
+                            <p>새로운 장애 사례 내용이 여기에 들어갑니다</p>
+                            <ul>
+                                <li><strong>초기 증상:</strong> 장애 초기 증상 설명</li>
+                                <li><strong>임시 복구:</strong> 임시 복구 시도 내용</li>
+                                <li><strong>환경:</strong> 시스템 환경 설명</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-step">
+                            <h4>원인 분석</h4>
+                            <p><strong>근본 원인</strong></p>
+                            <ul>
+                                <li><strong>원인 1:</strong> 첫 번째 원인 설명</li>
+                                <li><strong>원인 2:</strong> 두 번째 원인 설명</li>
+                                <li><strong>원인 3:</strong> 세 번째 원인 설명</li>
+                            </ul>
+                            
+                            <p><strong>장애 확산 과정</strong></p>
+                            <ol>
+                                <li>1단계: 장애 발생 초기 단계</li>
+                                <li>2단계: 장애 확산 단계</li>
+                                <li>3단계: 서비스 영향 단계</li>
+                            </ol>
+                            <p style="margin-top: 16px; margin-left: 20px; font-weight: 600; color: #d32f2f;">→ 최종 장애 영향 요약</p>
+                        </div>
+                        
+                        <div class="case-step">
+                            <h4>해결 과정</h4>
+                            <p><strong>1단계: 긴급 대응 및 자체 조치</strong></p>
+                            <ul>
+                                <li>긴급 대응 조치 1</li>
+                                <li>긴급 대응 조치 2</li>
+                                <li>긴급 대응 조치 3</li>
+                            </ul>
+                            
+                            <p><strong>2단계: 벤더 협력 통한 시스템 복구</strong></p>
+                            <ul>
+                                <li>벤더 협력 조치 1</li>
+                                <li>벤더 협력 조치 2</li>
+                                <li>벤더 협력 조치 3</li>
+                            </ul>
+                            
+                            <p><strong>3단계: 서비스 정상화 검증</strong></p>
+                            <ul>
+                                <li>검증 항목 1</li>
+                                <li>검증 항목 2</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-step">
+                            <h4>결과 및 예방책</h4>
+                            <p><strong>성과</strong></p>
+                            <ul>
+                                <li><strong>성과 1:</strong> 첫 번째 성과 설명</li>
+                                <li><strong>성과 2:</strong> 두 번째 성과 설명</li>
+                            </ul>
+                            
+                            <p><strong>예방책</strong></p>
+                            <ul>
+                                <li><strong>예방책 1:</strong> 첫 번째 예방책 설명</li>
+                                <li><strong>예방책 2:</strong> 두 번째 예방책 설명</li>
+                                <li><strong>예방책 3:</strong> 세 번째 예방책 설명</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

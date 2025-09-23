@@ -818,34 +818,72 @@ body {
 
 .case-step h4 {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 16px;
-    color: #007aff;
+    color: #1d1d1f;
 }
 
 .case-step p {
     font-size: 16px;
     line-height: 1.6;
-    color: #86868b;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+}
+
+.case-step p strong {
+    color: #0056d3;
+    font-weight: 400;
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.08), rgba(0, 86, 211, 0.05));
+    padding: 2px 8px;
+    border-radius: 6px;
 }
 
 .case-step ul {
     list-style: none;
-    margin-top: 16px;
+    margin: 16px 0;
+    padding-left: 0;
 }
 
-.case-step li {
-    position: relative;
-    padding-left: 24px;
-    margin-bottom: 8px;
-    color: #86868b;
+.case-step ol {
+    margin: 16px 0;
+    padding-left: 20px;
+    counter-reset: item;
 }
 
-.case-step li::before {
-    content: "→";
+.case-step ol li {
+    display: block;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    color: #1d1d1f;
+    line-height: 1.5;
+    counter-increment: item;
+}
+
+.case-step ol li::before {
+    content: counter(item) ". ";
+    font-weight: 600;
     color: #007aff;
+}
+
+.case-step ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+    line-height: 1.5;
+}
+
+.case-step ul li::before {
+    content: "•";
+    color: #007aff;
+    font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+.case-step ul li strong {
+    font-weight: 600;
+    color: #007aff;
 }
 
 .customer-list h3 {
@@ -2346,11 +2384,11 @@ blockquote {
 
 .cert-item::before {
     position: absolute;
-    bottom: 4px;
+    bottom: -10px;
     right: 20px;
     transform: rotate(-15deg);
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     opacity: 0.2;
     pointer-events: none;
     z-index: 0;
@@ -2361,7 +2399,7 @@ blockquote {
 
 .cert-item[data-org="VMware"]::before {
     content: "";
-    background-image: url('../icons/vmware-logo.svg');
+    background-image: url('../icons/vmware-logo.png');
 }
 
 .cert-item[data-org="Linux Foundation"]::before {
@@ -3036,4 +3074,42 @@ section .page-header h2,
     background: rgba(0, 122, 255, 0.2);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+/* Layer text styling for project sections */
+.layer-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007aff;
+    text-align: center;
+    line-height: 1.1;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Fix achievement icon width for consistent alignment */
+.achievement-icon {
+    width: 120px;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+/* Add spacing between project layer boxes */
+.project-objective .achievement-item {
+    margin-bottom: 16px;
+}
+
+.project-objective .achievement-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Project layer content text styling */
+.project-objective .achievement-content p {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Add more spacing between icon and content in project layers */
+.project-objective .achievement-content {
+    margin-left: 20px;
 }
