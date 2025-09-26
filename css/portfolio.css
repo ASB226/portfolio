@@ -2397,6 +2397,13 @@ blockquote {
     background-position: center;
 }
 
+.cert-item[data-org="AWS"]::before {
+    content: "";
+    background-image: url('../icons/aws-logo.svg');
+    background-size: 80px;
+    background-position: center 60%;
+}
+
 .cert-item[data-org="VMware"]::before {
     content: "";
     background-image: url('../icons/vmware-logo.png');

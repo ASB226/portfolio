@@ -199,6 +199,11 @@
                     <div class="subcard-divider"></div>
                 </div>
                 <div class="cert-grid">
+                    <div class="cert-item animate-in" data-org="AWS">
+                        <div class="cert-name">AWS Certified Solutions Architect – Associate (AWS-SAA)</div>
+                        <div class="cert-org">AWS</div>
+                        <div class="cert-date">2025.09</div>
+                    </div>
                     <div class="cert-item animate-in" data-org="Linux Foundation">
                         <div class="cert-name">Certified Kubernetes Security Specialist (CKS)<br><br></div>
                         <div class="cert-org">The Linux Foundation</div>
@@ -427,10 +432,9 @@
                                 <span class="layer-text">플랫폼 레이어</span>
                             </div>
                             <div class="achievement-content">
-                                <p>• Ansible을 통한 Kubernetes 클러스터 프로비저닝 및 구성 관리 자동화<br>
+                                <p>• Ansible을 활용한 Tanzu Kubernetes 클러스터 프로비저닝 및 구성 관리 자동화<br>
                                 • 다중 Kubernetes 클러스터 중앙 관리용도의 Supervisor 클러스터 및 Workload 클러스터 구성<br>
                                 • 롤링 업그레이드 및 장애 상황, 리소스 부족 시 추가 배포를 고려한 스펙으로 노드 구성<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;(Control Plane 3EA, Worker 9EA / 각 Worker 스펙: 60 vCPU, 180 MEM, 4.5TB)<br>
                                 • 네임스페이스 기반 멀티테넌시와 RBAC을 통한 보안 격리 및 리소스 관리 시스템 구축</p>
                             </div>
                         </div>
@@ -532,8 +536,8 @@
                             </div>
                             <div class="achievement-content">
                                 <p>• Terraform을 활용해 VM 배포 자동화 구성 및 컨테이너 접속 환경 세팅<br>
-                                • GPU Passthrough 방식의 Worker 노드 구성 및 NVIDIA GPU Operator를 배포를 통해 RTX A5000 모델 활용한 AI 워크로드 실행 환경 구성<br>
-                                • Veeam 백업 솔루션을 통한 플랫폼 레벨 백업 체계 구성</p>
+                                • GPU Passthrough 방식의  Kubernetes Worker 노드 구성 <br>
+                                • NVIDIA GPU Operator를 배포를 통해 RTX A5000 모델 활용한 AI/ML 워크로드 실행 환경 구성</p>
                             </div>
                         </div>
                         <div class="achievement-item">
@@ -600,8 +604,7 @@
                             <h4>상황</h4>
                             <p>Object Storage 기반 PV의 간헐적 연결 실패로 인한 Kubernetes 환경 서비스 중단 발생</p>
                             <ul>
-                                <li><strong>초기 증상:</strong> vSAN File Service 기반 PV 사용 Pod의 간헐적 연결 실패, 기존 정상 Pod도 스토리지 연결 해제되며 비정상 종료</li>
-                                <li><strong>임시 조치:</strong> CSI Controller 재시작 시 일시 정상화되나, 일정 시간 경과 후 재발하는 패턴 반복</li>
+                                <li><strong>초기 증상:</strong> vSAN File Service 기반 RWX PV의 간헐적 연결 실패로 해당 Pod 서비스 불가</li>
                                 <li><strong>환경:</strong> VMware 가상화 인프라 + vSAN 분산 스토리지 + Tanzu Kubernetes</li>
                             </ul>
                         </div>
@@ -633,14 +636,16 @@
                             <ul>
                                 <li>VMware 기술지원 심각도 1 케이스 오픈, 원격 지원 요청</li>
                                 <li>내부 가능 범위 우선 대응으로 복구 시간 단축</li>
-                                <li>vSAN 관리 서비스(vsanmgmtd, osfsd) 재시작, vCenter vpxd 서비스 재부팅</li>
+                                <li>Supervisor 클러스터 -> Workload 클러스터 CSI Controller 순차 재기동, CSI 드라이버 업그레이드</li>
+                                <li>vSAN 관리 서비스(vsanmgmtd, osfsd), vCenter, ESXi 관련된 서비스 재시작</li>
                                 <li>네트워크 레벨 이슈 해결 (NIC 성능 저하, vDS 포트 불일치)</li>
-                                <li>CSI 드라이버 업그레이드 및 Supervisor 클러스터 레벨 트러블슈팅, 장애 영향 범위 파악</li>
+                                <li>하이퍼바이저 시스템 로그 확인 및 반출, 장애 영향 범위 파악</li>
                             </ul>
                             
                             <p><strong>2단계: 벤더 협력 통한 시스템 복구</strong></p>
                             <ul>
                                 <li>vSAN File Service 재구성: VMware 엔지니어 가이드로 기존 구성 삭제 후 재배포</li>
+                                <li>문제 하이퍼바이저 버전 업데이트 패치 진행</li>
                                 <li>Content Library 복구: 새 Kubernetes 노드 배포 이미지 업로드</li>
                             </ul>
                             
@@ -699,7 +704,7 @@
                             <h4>원인 분석</h4>
                             <p><strong>문제 인식 과정</strong></p>
                             <ol>
-                                <li>정기점검 시 대시보드 모니터링을 통해 cert-manager Pod AGE가 1d로 재시작 된 현상 확인</li>
+                                <li>정기점검중 cert-manager Pod AGE가 1d로 재시작 된 부분 확인</li>
                                 <li>메세지 및 로그 확인 후 2주간 Grafana 모니터링 결과 컨트롤러 메모리 사용량이 resource limit 한계치까지 지속 증가 후 Pod 재시작 패턴 반복</li>
                                 <li>전체 서비스중 일부 CertificateRequest 실패로 Ready=False 상태 발생, 접속 불가 확인</li>
                             </ol>
@@ -739,7 +744,7 @@
                             <p><strong>예방책</strong></p>
                             <ul>
                                 <li><strong>버전 관리:</strong> cert-manager와 kubenetes 버전 호환 유지 및 전체 오픈소스 대상 정기적으로 known issue 파악 후 업그레이드 하는 프로세스 정립</li>
-                                <li><strong>정기점검 항목 추가:</strong> cert-manager 리소스 사용률 및 kubectl get certificates -A --field-selector status.conditions[0].status=True 명령어를 사용해 Ready=True 상태 반환 확인하는 항목 추가</li>
+                                <li><strong>정기점검 항목 추가:</strong> 점검 스크립트에 cert-manager 리소스 사용률 및 kubectl get certificates -A --field-selector status.conditions[0].status=True 명령어를 사용해 Ready=True 상태 반환 확인하는 항목 추가</li>
                             </ul>
                         </div>
                     </div>
