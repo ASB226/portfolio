@@ -1509,7 +1509,7 @@ blockquote {
 }
 
 .about-timeline-year {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     color: #007aff;
     width: 120px;
@@ -1529,7 +1529,7 @@ blockquote {
 }
 
 .about-timeline-item h3 {
-    font-size: 1.15rem;
+    font-size: 1.0rem;
     font-weight: 400;
     color: #1d1d1f;
     margin-bottom: 12px;
@@ -1538,11 +1538,15 @@ blockquote {
 }
 
 .about-timeline-item p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 400;
     color: #666;
     margin-bottom: 8px;
     line-height: 1.6;
+}
+
+.about-timeline-content p + h3 {
+    margin-top: 15px;
 }
 
 .about-timeline-item .highlight {
@@ -1585,7 +1589,7 @@ blockquote {
         padding-right: 0;
         padding-top: 0;
         margin-bottom: 8px;
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .about-timeline-content {
@@ -1594,11 +1598,11 @@ blockquote {
     }
 
     .about-timeline-item h3 {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
     }
 
     .about-timeline-item p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -1733,7 +1737,7 @@ blockquote {
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 1.4em;
-    font-style: italic;
+    font-style: normal;
 }
 
 .work-left-column .work-section-plain h4 {
