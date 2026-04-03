@@ -12,12 +12,17 @@ html {
 }
 
 body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    line-height: 1.6;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.65;
     color: #1d1d1f;
     background-color: #ffffff;
     font-size: 16px;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.01em;
+    word-break: keep-all;
 }
 
 /* Grid System */
@@ -123,7 +128,7 @@ body {
 }
 
 .name {
-    font-size: 72px;
+    font-size: 56px;
     font-weight: 700;
     margin: 0;
     margin-top: 80px;
@@ -202,7 +207,7 @@ body {
 
 /* Cover Page Specific Styles */
 .cover-page .name {
-    font-size: 84px;
+    font-size: 50px;
     font-weight: 400;
     margin: 0;
     letter-spacing: -0.03em;
@@ -2237,8 +2242,8 @@ blockquote {
 }
 
 .experience-spacer {
-    height: 24px;
-    margin: 16px 0;
+    height: 16px;
+    margin: 12px 0;
 }
 
 .email-styled {
